@@ -5,14 +5,13 @@ import Countup from 'react-countup';
 
 import './TillDate.css'
 
-export const TillDate = () => {
+export const Today = () => {
 
     const context = useContext(GlobalDataContext);
-    console.log(context.globalData.TotalConfirmed);
 
     return (
         <div className="container">
-            <h3>Summary</h3>
+            <h3>Today</h3>
             <Grid container spacing={3} justify="center">
 
                 <Grid item xs={8} md={3} component={Card} className="card infected">    
@@ -22,7 +21,7 @@ export const TillDate = () => {
                         </Typography>
                         <Typography variant="h5">   
                             <Countup    start = {0} 
-                                        end = {parseInt(context.globalData.TotalConfirmed)} 
+                                        end = {parseInt(context.globalData.NewConfirmed)} 
                                         duration = {.5} 
                                         separator = ","/>
                         </Typography>
@@ -30,7 +29,7 @@ export const TillDate = () => {
                             {/* {new Date(lastUpdate).toDateString()} */}
                         </Typography>
                         <Typography variant="body2">
-                            Total Infections due to COVID-19.
+                            New Infections reported today.
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -41,13 +40,13 @@ export const TillDate = () => {
                             Recovered
                         </Typography>
                         <Typography variant="h5">
-                            <Countup start = {0} end = {parseInt(context.globalData.TotalRecovered)} duration = {.5} separator = ","/>
+                            <Countup start = {0} end = {parseInt(context.globalData.NewRecovered)} duration = {.5} separator = ","/>
                         </Typography>
                         <Typography color="textSecondary">
                             {/* {new Date(lastUpdate).toDateString()} */}
                         </Typography>
                         <Typography variant="body2">
-                            Total Recovered from COVID-19.
+                            New recovered repoted today.
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -58,13 +57,13 @@ export const TillDate = () => {
                             Deaths
                         </Typography>
                         <Typography variant="h5">
-                            <Countup start = {0} end = {parseInt(context.globalData.TotalDeaths)} duration = {.5} separator = ","/>
+                            <Countup start = {0} end = {parseInt(context.globalData.NewDeaths)} duration = {.5} separator = ","/>
                         </Typography>
                         <Typography color="textSecondary">
                             {/* {new Date(lastUpdate).toDateString()} */}
                         </Typography>
                         <Typography variant="body2">
-                            Total Deaths due to COVID-19.
+                            New deaths reported today.
                         </Typography>
                     </CardContent>
                 </Grid>
