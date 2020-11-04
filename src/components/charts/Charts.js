@@ -1,9 +1,10 @@
 import React from 'react'
+import  {PieChart}  from './PieChart'
 
 export const Charts = () => {
     return (
         <div>
-            Charts
+            <PieChart></PieChart>
         </div>
     )
 }
