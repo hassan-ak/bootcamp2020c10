@@ -10,6 +10,7 @@ export const Summary = ({children,props}) => {
         NewRecovered:0,
         NewDeaths:0,
         Dated:0,
+        Country:"Global",
     })
     
     // useEffect Hooks to use fetch Data
@@ -25,6 +26,7 @@ export const Summary = ({children,props}) => {
                                 NewRecovered: `${data.Global.NewRecovered}`,
                                 NewDeaths: `${data.Global.NewDeaths}`,
                                 Dated: `${data.Date}`,
+                                Country:"Global"
                 })
             }
             fetchData();
@@ -42,6 +44,7 @@ export const Summary = ({children,props}) => {
                                 NewRecovered: `${selectedDataSet[0].NewRecovered}`,
                                 NewDeaths: `${selectedDataSet[0].NewDeaths}`,
                                 Dated: `${selectedDataSet[0].Date}`,
+                                Country:`${selectedDataSet[0].Country}`
                 })
             }
             fetchData();

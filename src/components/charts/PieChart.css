@@ -3,5 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 85vw;
+}
 
+h3:first-of-type{
+    margin-bottom: 0;
+}
+h3:last-of-type{
+    margin-top: 0;
 }

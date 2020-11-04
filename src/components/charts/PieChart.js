@@ -9,6 +9,7 @@ export const PieChart = () => {
     const infected = parseInt(context.globalData.TotalConfirmed);
     const recovered = parseInt(context.globalData.TotalRecovered);
     const deaths = parseInt(context.globalData.TotalDeaths);
+    const country = context.globalData.Country;
     const data = {
         labels: [
             'Infected',
@@ -30,8 +31,9 @@ export const PieChart = () => {
         }]
     };
     return (
-        <div className="pieChartContainer" style={{height:"auto", width:"auto"}}>
-            <h3>Total</h3>
+        <div className="pieChartContainer">
+            <h3>Commulative Record</h3>
+            <h3>{country}</h3>
             <Doughnut data={data}/>
         </div>
     )
