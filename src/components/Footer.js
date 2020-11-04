@@ -1,9 +1,13 @@
+// React Imports
 import React from 'react';
+
+// Material UI Imports
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
+// Styling Material UI Component
 const useStyles = makeStyles((theme) => ({
   appBar: {
     top: 'auto',
@@ -18,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Footer Function
 export default function Footer() {
   const classes = useStyles();
 

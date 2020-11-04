@@ -9,6 +9,9 @@ body{
     margin: 0;
 }
 
-.ok{
-    background-color: rgb(255, 132, 87);
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+

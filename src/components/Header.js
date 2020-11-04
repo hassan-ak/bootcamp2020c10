@@ -1,9 +1,13 @@
+// React Imports
 import React from 'react';
+
+// Material UI Imports
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
+// Styling Material UI Component
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -19,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Header Function
 export default function Header() {
   const classes = useStyles();
 

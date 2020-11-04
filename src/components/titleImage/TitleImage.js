@@ -1,8 +1,13 @@
+// React Imports
 import React from 'react';
-import coronaImage from '../../images/titleimage.png';
-import './TitleImage.css'
-// import styles from  './TitleImage.module.css';
 
+// Image Import
+import coronaImage from '../../images/titleimage.png';
+
+// Styles Import
+import './TitleImage.css'
+
+// Image function
 function TitleImage() {
   
   return (
