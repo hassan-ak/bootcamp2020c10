@@ -35,8 +35,6 @@ export const Summary = ({children,props}) => {
                 const countries = await data.Countries;
                 let selectedDataSet = await countries.filter(item => item.Slug === props);
 
-                console.log(selectedDataSet[0]);
-
                 setGlobalData({ TotalConfirmed: `${selectedDataSet[0].TotalConfirmed}`,
                                 TotalRecovered: `${selectedDataSet[0].TotalRecovered}`,
                                 TotalDeaths: `${selectedDataSet[0].TotalDeaths}`,
