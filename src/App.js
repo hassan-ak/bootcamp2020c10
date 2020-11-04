@@ -8,17 +8,28 @@ import { Charts } from "./components/charts/Charts";
 
 // Styles Import
 import './App.css';
+import { useState } from "react";
+import { Summary } from "./apiCalls/Summary";
 
 
 function App() {
+
+  const [selectedCountry, setSelectedCountry] = useState("global")
+
+  async function receiveValue(value) {
+    setSelectedCountry(value)
+  }
+
   return (
     <div>
       <Header></Header>
       <TitleImage></TitleImage>
       <div className="container">
-        <Cards></Cards>
-        <CountryPicker></CountryPicker>
-        <Charts></Charts>
+        <Summary props={selectedCountry}>
+        <CountryPicker receiveValue={receiveValue}></CountryPicker>
+          <Cards></Cards>
+          <Charts></Charts>
+        </Summary>
       </div>
       <Footer></Footer>
     </div>
