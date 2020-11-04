@@ -8,7 +8,6 @@ import './TillDate.css'
 export const TillDate = () => {
 
     const context = useContext(GlobalDataContext);
-    console.log(context.globalData.TotalConfirmed);
 
     return (
         <div className="container">
@@ -20,14 +19,11 @@ export const TillDate = () => {
                         <Typography color="textSecondary" gutterBottom>
                             Infected
                         </Typography>
-                        <Typography variant="h5">   
-                            <Countup    start = {0} 
-                                        end = {parseInt(context.globalData.TotalConfirmed)} 
-                                        duration = {.5} 
-                                        separator = ","/>
+                        <Typography variant="h5">
+                            <Countup start = {0} end = {parseInt(context.globalData.TotalConfirmed)} duration = {.5} separator = ","/>
                         </Typography>
                         <Typography color="textSecondary">
-                            {/* {new Date(lastUpdate).toDateString()} */}
+                            {new Date(context.globalData.Dated).toDateString()}
                         </Typography>
                         <Typography variant="body2">
                             Total Infections due to COVID-19.
@@ -44,7 +40,7 @@ export const TillDate = () => {
                             <Countup start = {0} end = {parseInt(context.globalData.TotalRecovered)} duration = {.5} separator = ","/>
                         </Typography>
                         <Typography color="textSecondary">
-                            {/* {new Date(lastUpdate).toDateString()} */}
+                            {new Date(context.globalData.Dated).toDateString()}
                         </Typography>
                         <Typography variant="body2">
                             Total Recovered from COVID-19.
@@ -61,7 +57,7 @@ export const TillDate = () => {
                             <Countup start = {0} end = {parseInt(context.globalData.TotalDeaths)} duration = {.5} separator = ","/>
                         </Typography>
                         <Typography color="textSecondary">
-                            {/* {new Date(lastUpdate).toDateString()} */}
+                            {new Date(context.globalData.Dated).toDateString()}
                         </Typography>
                         <Typography variant="body2">
                             Total Deaths due to COVID-19.

@@ -25,11 +25,8 @@ export const Today = () => {
                                         duration = {.5} 
                                         separator = ","/>
                         </Typography>
-                        <Typography color="textSecondary">
-                            {/* {new Date(lastUpdate).toDateString()} */}
-                        </Typography>
                         <Typography variant="body2">
-                            New Infections reported today.
+                            New Infections reported today. <br/>({new Date(context.globalData.Dated).toDateString()})
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -42,11 +39,8 @@ export const Today = () => {
                         <Typography variant="h5">
                             <Countup start = {0} end = {parseInt(context.globalData.NewRecovered)} duration = {.5} separator = ","/>
                         </Typography>
-                        <Typography color="textSecondary">
-                            {/* {new Date(lastUpdate).toDateString()} */}
-                        </Typography>
                         <Typography variant="body2">
-                            New recovered repoted today.
+                            New Infections reported today.<br/> ({new Date(context.globalData.Dated).toDateString()})
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -59,11 +53,8 @@ export const Today = () => {
                         <Typography variant="h5">
                             <Countup start = {0} end = {parseInt(context.globalData.NewDeaths)} duration = {.5} separator = ","/>
                         </Typography>
-                        <Typography color="textSecondary">
-                            {/* {new Date(lastUpdate).toDateString()} */}
-                        </Typography>
                         <Typography variant="body2">
-                            New deaths reported today.
+                            New Infections reported today. <br/>({new Date(context.globalData.Dated).toDateString()})
                         </Typography>
                     </CardContent>
                 </Grid>

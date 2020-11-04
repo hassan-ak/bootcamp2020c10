@@ -3,12 +3,14 @@ import GlobalDataContext from './GlobalDataContext'
 
 export const Summary = ({children}) => {
 
+
     const [globalData, setGlobalData] = useState({  TotalConfirmed:0,
                                                     TotalRecovered:0,
                                                     TotalDeaths:0,
                                                     NewConfirmed:0,
                                                     NewRecovered:0,
                                                     NewDeaths:0,
+                                                    Dated:0,
                                                 })
 
     // useEffect Hooks to use fetch function
@@ -22,6 +24,7 @@ export const Summary = ({children}) => {
                             NewConfirmed: `${data.Global.NewConfirmed}`,
                             NewRecovered: `${data.Global.NewRecovered}`,
                             NewDeaths: `${data.Global.NewDeaths}`,
+                            Dated: `${data.Date}`,
             })
         }
         fetchData();
