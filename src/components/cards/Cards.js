@@ -1,9 +1,11 @@
 import React from 'react'
+import { Summary } from '../../apiCalls/Summary'
+import { TillDate } from './TillDate'
 
 export const Cards = () => {
     return (
-        <div>
-            Cards
-        </div>
+        <Summary>
+            <TillDate></TillDate>
+        </Summary>
     )
 }
