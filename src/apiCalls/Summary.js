@@ -13,7 +13,7 @@ export const Summary = ({children}) => {
                                                     Dated:0,
                                                 })
 
-    // useEffect Hooks to use fetch function
+    // useEffect Hooks to use fetch Data
     useEffect(() => {
         async function fetchData() {
             const response = await fetch('https://api.covid19api.com/summary');

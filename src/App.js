@@ -15,9 +15,11 @@ function App() {
     <div>
       <Header></Header>
       <TitleImage></TitleImage>
+      <div className="container">
         <Cards></Cards>
         <CountryPicker></CountryPicker>
         <Charts></Charts>
+      </div>
       <Footer></Footer>
     </div>
   );
