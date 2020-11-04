@@ -5,7 +5,10 @@ import { TillDate } from './TillDate'
 export const Cards = () => {
     return (
         <Summary>
+            <div>
             <TillDate></TillDate>
+            </div>
+            
         </Summary>
     )
 }
