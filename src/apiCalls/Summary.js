@@ -12,6 +12,12 @@ export const Summary = ({children,props}) => {
         Dated:0,
         Country:"Global",
     })
+
+    const [totalData, setTotalData] = useState({  confirmed:"",
+        recovered:"",
+        deaths:"",
+        Dated:"",
+    })
     
     // useEffect Hooks to use fetch Data
     useEffect(() => {
@@ -52,9 +58,35 @@ export const Summary = ({children,props}) => {
         
     },[props]);
 
+
+    // function to fetch data from day one
+
+    useEffect(() => {
+        if (props === "global") {
+            
+        }else{
+            async function fetchAllData() {
+                const response = await fetch(`https://api.covid19api.com/total/country/${props}`);
+                const data = await response.json();
+                const infected = (data.map(item=>(item.Confirmed)));
+                const recover = (data.map(item=>(item.Recovered)));
+                const death = (data.map(item=>(item.Deaths)));
+                const date = (data.map((item=>(item.Date))));
+                setTotalData({ confirmed: `${infected}`,
+                               recovered: `${recover}`,
+                               deaths: `${death}`,
+                               Dated:`${date}`
+                })
+            }
+        fetchAllData();
+        }
+    }, [props]);
+
+
     return(
         <GlobalDataContext.Provider
             value = {{globalData,
+                      totalData,
                       }}>
                 {children}
         </GlobalDataContext.Provider>

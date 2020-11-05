@@ -3,12 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 85vw;
+    width: 65vw;
+    border: 1px dotted gray;
+    border-radius: 20px;
+    padding-bottom: 10px;
 }
 
-h3:first-of-type{
+/* .pieChartContainer > h3:first-of-type{
     margin-bottom: 0;
 }
-h3:last-of-type{
+.pieChartContainer> h3:last-of-type{
     margin-top: 0;
-}
+} */
